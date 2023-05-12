@@ -407,6 +407,38 @@ port 1313 already in use, attempting to use an available port
 </description>
         </item>
         <item>
+        <title>使用Git出现的一堆问题</title>
+        <link>https://attack-jiangyou.github.io/p/%E4%BD%BF%E7%94%A8git%E5%87%BA%E7%8E%B0%E7%9A%84%E4%B8%80%E5%A0%86%E9%97%AE%E9%A2%98/</link>
+        <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E4%BD%BF%E7%94%A8git%E5%87%BA%E7%8E%B0%E7%9A%84%E4%B8%80%E5%A0%86%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;p&gt;git 设置&lt;/p&gt;
+&lt;h1 id=&#34;当前仓库&#34;&gt;当前仓库&lt;/h1&gt;
+&lt;p&gt;git config &amp;ndash;list&lt;/p&gt;
+&lt;h1 id=&#34;全局配置&#34;&gt;全局配置&lt;/h1&gt;
+&lt;p&gt;git config &amp;ndash;global &amp;ndash;list
+设置全局代理，使用 http 代理&lt;/p&gt;
+&lt;p&gt;git config &amp;ndash;global https.proxy http://127.0.0.1:1080
+git config &amp;ndash;global https.proxy https://127.0.0.1:1080
+设置全局代理，使用socks5代理&lt;/p&gt;
+&lt;p&gt;git config &amp;ndash;global http.proxy socks5://127.0.0.1:1080
+git config &amp;ndash;global https.proxy socks5://127.0.0.1:1080
+取消全局代理&lt;/p&gt;
+&lt;p&gt;git config &amp;ndash;global &amp;ndash;unset http.proxy
+git config &amp;ndash;global &amp;ndash;unset https.proxy
+只对 github.com 使用代理&lt;/p&gt;
+&lt;p&gt;git config &amp;ndash;global http.https://github.com.proxy http://127.0.0.1:20081
+git config &amp;ndash;global https.https://github.com.proxy http://127.0.0.1:20081
+取消 github.com 代理&lt;/p&gt;
+&lt;p&gt;git config &amp;ndash;global &amp;ndash;unset http.https://github.com.proxy
+git config &amp;ndash;global &amp;ndash;unset https.https://github.com.proxy&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/hb1993/article/details/125866995&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/hb1993/article/details/125866995&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/UUUUUnnn/article/details/125945902&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/UUUUUnnn/article/details/125945902&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>我那么多存储介质该怎么处理啊</title>
         <link>https://attack-jiangyou.github.io/p/%E6%88%91%E9%82%A3%E4%B9%88%E5%A4%9A%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8%E8%AF%A5%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E5%95%8A/</link>
         <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
