@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>崔崔的小站</title>
+        <link>https://attack-jiangyou.github.io/</link>
+        <description>Recent content on 崔崔的小站</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 12 May 2023 01:14:51 +0800</lastBuildDate><atom:link href="https://attack-jiangyou.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Burp使用文档</title>
+        <link>https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/</link>
+        <pubDate>Fri, 12 May 2023 01:14:51 +0800</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/</guid>
+        <description>&lt;p&gt;Intruder（爆破器）
+当仅设置两个变量时，不同的攻击类型对应的效果
+&lt;img src=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585376002.png&#34;
+	width=&#34;1603&#34;
+	height=&#34;500&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585376002_hud750aac544444e4bfadbc852941acf3a_88158_480x0_resize_box_3.png 480w, https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585376002_hud750aac544444e4bfadbc852941acf3a_88158_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;320&#34;
+		data-flex-basis=&#34;769px&#34;
+	
+&gt;
+四种模式
+1.狙击手
+payload按照变量的设置顺序依次打入payload中，每个变量都会完整的打入一遍payload
+&lt;img src=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585483693.png&#34;
+	width=&#34;1603&#34;
+	height=&#34;536&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585483693_huedf9a33654cf68c7f63ed6556a543e61_39406_480x0_resize_box_3.png 480w, https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585483693_huedf9a33654cf68c7f63ed6556a543e61_39406_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;299&#34;
+		data-flex-basis=&#34;717px&#34;
+	
+&gt;
+2.破城槌
+每次爆破，所有变量都被指定为同一个payload
+&lt;img src=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585630486.png&#34;
+	width=&#34;1288&#34;
+	height=&#34;815&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585630486_hubf47a410a99dfef356ec7fb7adaa6676_89277_480x0_resize_box_3.png 480w, https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585630486_hubf47a410a99dfef356ec7fb7adaa6676_89277_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;
+3.音叉
+一套payload被指定给你设置的变量，爆破时每个变量都有对应的一套payload
+&lt;img src=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585729877.png&#34;
+	width=&#34;1272&#34;
+	height=&#34;785&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585729877_hua82ccfc48f72810f31d0295cb73a1a29_94611_480x0_resize_box_3.png 480w, https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682585729877_hua82ccfc48f72810f31d0295cb73a1a29_94611_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;388px&#34;
+	
+&gt;
+4.集束炸弹
+可以设置多套payload，每套payload的每个变量都会和另一套payload的所有变量尝试一次，如果所以复杂度是乘法关系，假设有两套payload，每套都有10个变量，那就要爆破100次
+&lt;img src=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682586384062.png&#34;
+	width=&#34;1172&#34;
+	height=&#34;510&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682586384062_hu380f590f82812ab20fb64ea6d04429b8_39606_480x0_resize_box_3.png 480w, https://attack-jiangyou.github.io/p/burp%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/1682586384062_hu380f590f82812ab20fb64ea6d04429b8_39606_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;229&#34;
+		data-flex-basis=&#34;551px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>博客搭建过程中遇到的诡异事件</title>
+        <link>https://attack-jiangyou.github.io/p/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E8%AF%A1%E5%BC%82%E4%BA%8B%E4%BB%B6/</link>
+        <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E8%AF%A1%E5%BC%82%E4%BA%8B%E4%BB%B6/</guid>
+        <description>&lt;p&gt;诡异的端口占用问题
+port 1313 already in use, attempting to use an available port
+据称是由于开启Hyper-V后每次开机都会占用一部分端口导致的，导致通过netstat -ano | grep &amp;ldquo;1313&amp;quot;没有发现任何程序在占用1313但是就是显示这个端口用不了
+通过命令netsh int ip show excludedportrange protocol=tcp查询到1313确实被Hyper-V占用了&lt;/p&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;开始端口		结束端口
+  1064        1163
+  1164        1263
+  1264        1363
+  1364        1463
+  1464        1563
+ 31724       31823
+ 50000       50059
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解决方案：https://github.com/Fndroid/clash_for_windows_pkg/issues/671&lt;/p&gt;
+&lt;p&gt;netsh int ip set dynamicport tcp start=49152 num=16384
+重启&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>辛酸故事</title>
+        <link>https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/</link>
+        <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/</guid>
+        <description>&lt;img src="https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681462213304.jpg" alt="Featured image of post 辛酸故事" /&gt;&lt;blockquote&gt;
+&lt;p&gt;转载地址：https://baijiahao.baidu.com/s?id=1763114872814294005&amp;amp;wfr=spider&amp;amp;for=pc&lt;/p&gt;
+&lt;p&gt;鉴于原文章已被风控，所以将文章转载到自己的小站，日行一善&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;“大不了就去送外卖”，这句话曾经是很多职场打工人挂在嘴边的一句话，也是很多人当真的一条人生退路——几乎没有门槛，不怕35岁限制，只要你肯吃苦，就能稳定赚钱，关键赚得也不少，月薪过万十分常见。
+但现在，送外卖的人太多了，他们是失意又失业的职场打工人，是创业失败的小老板，是毕业找不到工作的大学生，是上有老下有小的中年人，他们涌进外卖行业，让这份公平又易得的工作，快要失去兜底的意义。
+可是如果连外卖都不招人了，他们，或者说我们，又能走向哪里？&lt;/p&gt;
+&lt;h2 id=&#34;池子多出来很多鱼&#34;&gt;池子多出来很多鱼&lt;/h2&gt;
+&lt;p&gt;又一个深夜，28岁的新手外卖员罗颂失眠了。
+他是被震天响的呼噜声吵醒的。罗颂所在的出租屋，是个不到120平的四居室，里面已经塞进了接近30位外卖骑手，上下铺，没有公共区域，行李箱塞在床底，租住在这里，就像沙丁鱼被装进罐头，找不到缝隙，也没有隐私。
+醒来之后，罗颂更睡不着了，他的心里填满失落感。罗颂是山东人，今年年初刚来北京，成为了一名美团外卖的专送骑手，但仅仅两个月时间，他就发现，这活儿没有想象中好干——拥挤的并不只是宿舍，更让罗颂感觉到逼仄的是，整个外卖骑手群体的爆满。
+3月，春暖花开的北京，涌入了一大批和罗颂一样的新骑手，就像春水化冻，池子里突然多出来很多鱼。往年春节后，外卖行业会有一段时间人手紧缺，为了保障运作，2023年2月，美团开启了“春风送岗”行动，再开放50万个骑手、站长等配送服务岗位，还花了1个亿，用各种方式来招聘新骑手。
+没想到的是，预期中的用工荒没有到来，50万个岗位正在以光速饱和。另一位饿了么的外卖员冯祥说，年前，自己所在的站点还只有30来人，如今，站点扩充到快90人了。冯祥来自河北，已经在北京跑了7年外卖，春天是外卖淡季，气温回升，人们更愿意出门吃饭，单量会变少，但骑手这么多，是他印象里的头一回。
+和罗颂住在一起的鞍山人丁长义，已经跑了两年外卖。之前，他住的宿舍人少，又都是熟人，想家的时候，丁长义喜欢给大家做锅包肉吃，有人凑锅，有人凑调料，丁长义下厨，就能做出一顿锅包肉，省钱。但就在两个月前，突然来了很多新人，这才换了大宿舍。这之后，属于个人的空间少了，丁长义失去了下厨的机会，“薪资低，带锅来的人走了”，取而代之的是组团来的年轻新骑手，“不跟你一条心”。
+新人们也加剧了竞争的激烈程度。罗颂和丁长义所长期驻扎的站点，属于热闹的北四环商圈，一天的单量在2300单左右，但平均下来，每个人只能跑30单。他们计算过，在中午的用餐高峰期，一位熟悉路线的骑手就可以送出15-20单了，30单的总量即意味着，除了中午和晚上，骑手们几乎没有订单可跑。
+于是，下午两点，骑手们纷纷空闲下来。罗颂和骑手们喜欢聚在和府捞面，闲聊、睡觉、大眼瞪小眼，因为只有这里提供免费的茶水和座位，能够让没有订单的时光消磨得更快些。一直到下午五点半，这里的话题都会围绕着“没单”和“降薪”展开。
+罗颂是这个话题的积极参与者，他本就是冲着高薪来的。最开始，罗颂还是在短视频上刷到招聘广告，里面写着，一个月能拿到一万八。入职之后，罗颂问老骑手们，这些宣传是不是在骗人？大家纷纷晒出了自己的工资转账记录，“一年不少挣”。
+看着那些数字，罗颂更加充满信心，他觉得“来对了”——外卖骑手实行“计件制度”，奉行多劳多得，而自己精神好、能吃苦，如果能一天跑上60单，按照一单8块5计算，干满30天，就能赚15300元。但如今，他到手的薪资不到8000元，比预期减少太多。
+不过，新人往往很难抢得过老人。闲谈间，女外卖员焦蕾说起，这段时间，骑手群里来了不少不到20岁的年轻人，都和罗颂一样，是冲着“赚大钱”来的。其中，有一个18岁的小姑娘，刷到抖音的招聘广告，独自一人来北京跑外卖，结果单量少，又不熟悉路，一天下来，才跑7单，第二天跑了10单。同是老乡的焦蕾看不下去，给小姑娘介绍了一家奶茶店，让她到店里学做奶茶，“好歹是门手艺”。
+26岁的田橙子才跑了两天外卖，就已经开始盘算这份工作值不值。昨天，他才跑了18单，收入100多块，比他预期中整整少了一半。但花销没少，电动车的租金一个月700元，挤得像罐头的宿舍800元，更令他咋舌的是北京物价，这个晚上，他点了一份最便宜的麻婆豆腐盖饭，都得18元。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532717326.jpg&#34;
+	width=&#34;640&#34;
+	height=&#34;480&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532717326_hud21a635e39eae2a3745d16072834635b_51955_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532717326_hud21a635e39eae2a3745d16072834635b_51955_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;▲ 下午五点半，本该是高峰期，骑手们还在等待派单。图 / 每日人物摄&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;争夺饵料&#34;&gt;争夺饵料&lt;/h2&gt;
+&lt;p&gt;对于罗颂、田橙子这样的新骑手们来说，他们刚刚进入水中，就已经感受到了氧气稀薄的窒息感，不得不先“卷”起来。
+田橙子的18单，午高峰有9单、晚高峰有8单，剩下的一单，是他整整等了一个下午，实在没办法了，找到了站长，让站长派来的一个宝贵订单，距离长达3公里，专送骑手们基本不会接这么远的单子，送完这单，他花了一个小时。
+罗颂则选择早起，再多送两个小时的早餐时段。前两天，他因为送餐时和保安起了口角，去派出所待了一天，没赚上钱，还赔了800块。为了弥补，罗颂不得不把所有的时间利用起来，那个晚上，他跑到凌晨3点才下线，两个小时之后，罗颂睡醒起床，继续送早餐订单。
+而身经百战的老人们，也轻松不到哪里去。
+最近，丁长义感到很疲惫，他觉得，自己好像越来越像一个机器人。丁长义今年41岁了，精神正在流失，他曾经给自己制定过一个容易够到的小目标，每天只要跑到35单就下班，不然一天没得赚。但从上个月中旬开始，订单少了，他只好选择一直在线，每天变成“一单一单地熬”，一个小时能多上一两单，熬到快11点，才能完成任务下线。
+这大大减少了丁长义的休息时间，回宿舍倒头睡，睁眼就得上线，“就像到点开机的机器人”。以往，晚上7点就能收工，丁长义会约上自己的骑手好友，一起骑车去什刹海、天安门走走，这是难得的、属于丁长义的时光。
+37岁的刘大海，和丁长义有相似的疲惫感。他应对竞争的方式是，接下任何一个订单。在美团专送，骑手们的订单都是系统派单，但每个人每天有3次转单的机会，于是，一些太难跑的订单，刘大海都不接，尤其是一个高档小区，不允许外卖员骑车进入，再远的单元楼，都得步行送进去。往日，接到这个小区的单子之后，刘大海会转单出去，像田橙子这样的年轻骑手更愿意接下。
+但现在，再遇到这种单子，刘大海不敢转了，能多跑一单是一单。相比起疲惫，收入少更让刘大海着急，父母老了，孩子才17岁，都是用钱的时候，他只好在自己身上省钱，一天一包烟减少到三天一包，忍不住的时候就喝口水。刘大海特别喜欢吃菠萝，但这几天，他心焦上火，嘴里起了好几个大泡，吃着嘴会疼，不过这样正好，能再省下一笔菠萝钱。
+没有订单、收入锐减的阴云，就这样笼罩着所有的骑手，大家正在习惯一个新的事实——外卖真的不好干了。
+有老骑手开始了最后的挣扎，比如饿了么骑手冯祥。4月初的一天，北京下了一场暴雨。那一天，冯祥隐隐有些兴奋，“因为好久没有爆单过了”。早上，他穿上雨衣、给手机带上防护套，冲进大雨里，想抓住这来之不易的机会，多跑几单。最终，冯祥跑了50多单，已经是两个月来单子最多的一次，赚了400多块。
+冯祥说，那天超常的努力，似乎是一场最后的挣扎，“再拼一次，看看能赚多少钱”，如果还不行，那就不跑了。
+但也是这一天，冯祥收到了2个差评，其中一个，是在中午的高峰期，外卖柜满了，他赶着送另一个订单，来不及解释，就把外卖放在快递柜旁边，大雨淋湿了外卖盒。回想起那个决定，冯祥有点后悔，也觉得“是不是自己心态出了问题”。他跑了7年外卖，以前从没有连续犯错过，也不会着急这几分钟，总是等到客户下来拿，因为一旦有差评，就会被罚款。
+“是太低落了吗？”冯祥问自己。这段时间，单子少，单价还降，那天下大雨，他听说，之后的恶劣天气，不会再有2元一单的补助，虽然消息真假要到下个月发工资后才知道，但他还是一下子泄了气。
+老天好像也在劝退冯祥——拼尽全力的结果是，赚400元，却送错2单，被罚1000元，强制下线7天。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532757837.jpg&#34;
+	width=&#34;640&#34;
+	height=&#34;398&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532757837_hua42642a55113616b6e9faacefcfc1535_23574_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532757837_hua42642a55113616b6e9faacefcfc1535_23574_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;▲ 今年年初，站长们发在朋友圈的招聘宣传图。图 / 受访者提供&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;水温的变化&#34;&gt;水温的变化&lt;/h2&gt;
+&lt;p&gt;收到处罚结果的时候，冯祥感到十分诧异——罚金变高了。两个差评，每个都被罚500块，这是之前从来没有的惩罚力度。不止如此，站点还在4月1日开始，执行了更严格的管理措施，比如，所有人需要在8点30分参加晨会，晚到罚款200元，缺席罚款500元。
+冯祥有些不开心，“好像就是人多之后，觉得我们走不走都无所谓了，不需要你了，觉得这里管得严、不舒服，那你就别干了”。
+事实上，任何生物聚集在一起，都会形成一种稳固的生态，维系一套公认的运作法则。此前，对于外卖骑手们来说，这种生态的基础法则就是，骑手数量是有限的。
+一位干了7年的美团站长吴楠说，在外卖界，也有一只“看不见的大手”，在随时调节外卖员的数量。他们会在美团、饿了么这两个平台之间反复横跳。甚至在美团专送内部，也有很多外卖员是不稳定的，他们会跑一段时间众包（指没有站点的临时骑手），再跑一段时间乐跑（指专门跑一些远单的临时骑手）、畅跑（指专门跑一些近单的临时骑手），但原则都只有一个，“哪里的单价高就去哪里”，就像鱼能够自由地活动在开阔的水域里。
+对于骑手们的这种流动，站长们往往持默许态度，并不在意，因为骑手是珍贵的。早几年的时候，各家外卖平台展开骑手抢人大战；后来，兴起的网约车、同城、闪送服务，都在和外卖行业抢人；疫情时代，外卖骑手更是“香饽饽”。
+冯祥记得，这几年来，工作的确好干，站长们也愿意和骑手们搞好关系。有的时候，如果有订单超时、差评，只要站长不上报，就不会处罚到自己。冯祥最感动的一次，是自己的孩子生病了，工资还没有发，他把情况告诉站长，对方果断地预支了几千块钱的工资。冯祥当时觉得，自己的存在有价值：“站长是希望留住我的。”
+但显然，情况变了，外卖骑手数量正在飞速增长。美团财报显示，2021年美团骑手的数量为527万，2022年，美团骑手的数量变成了624万，其中81.6%是来自县域乡村地区的农村转移劳动力，平台一年新增骑手的人数达到了97万。
+吴楠说，今年，应聘者比往年更多，他们依靠中介公司找人，每介绍成功一个，会给几千块钱的推荐费，现在，推荐费从两三千降到一千多。同时，吴楠也开始在意起了稳定性，“跳来跳去的那种骑手，我们就不招了”。不仅吴楠在意，很多骑手也不愿意再流动，吴楠观察到，大家更愿意固定下来，“就跟突然醒悟过来一样”。
+最直接的原因，是“哪里的情况都不好”。比如美团乐跑，往日不限班次，单价虽然低，但单量多，骑手们想跑多久都行。但现在，乐跑开始限制骑手们的班次，划分成午高峰、晚高峰、下午茶等，如果骑手没法在自己的班次里完成单量，会直接断线，吴楠预料到了这种情况：“因为报名乐跑的人也特别多，特别富余。”
+这样一来，更多的众包骑手，选择固定下来，加入到站点的团队中。上个月，美团的罗颂和丁长义收到通知，4月开始，众包的单子划到了专送池子里，他们的单子稍微多了一点，但单价从原来的8块5，掉到了6块3。饿了么的冯祥说，以前，一个月跑到500单以上，单价会从每单7块涨到每单8块，但现在，需要跑到700单以上，才能拿到每单8块的单价了。
+而对于这些改变，一些骑手选择了接受，他们停止游动，在有限的空间里寻找生机。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532777862.jpg&#34;
+	width=&#34;640&#34;
+	height=&#34;408&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532777862_hu8373ec749e6f5a15462517ebe1a0e112_48271_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532777862_hu8373ec749e6f5a15462517ebe1a0e112_48271_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;▲ 等待送餐的骑手们。图 / 视觉中国&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;376px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;失去兜底的工作&#34;&gt;失去兜底的工作&lt;/h2&gt;
+&lt;p&gt;作为一份工作，外卖骑手曾经是一个“最好的选择”。
+在罗颂所在的站点，每个骑手都能说出一大堆人生往事，每一段经历都能对应一个选择这份职业的原因，是它们吸引着有着不同人生路径的骑手，最终汇聚到这个池塘里来。
+对于冯祥来说，选择做骑手，是因为它足够“自由”。26岁的时候，冯祥独自一人来到北京，成为一名骑手。在此之前，他曾经去过廊坊的京东方，做工人，但冯祥觉得“不自由”，连抽烟都不让。但送外卖不一样，没人管，冯祥刚到北四环当骑手时，路过鸟巢，就能进去转一圈，这让他感觉到自在。
+而在很多人的人生轨迹里，外卖骑手几乎是他们流转的最后一站。比如41岁的鞍山人丁长义。原本，他有过一份很满意的工作，是在一家单位做货车司机。但女儿出生的那一年，他想多赚点奶粉钱，于是白天跑货车，晚上去做代驾，半夜，疲劳驾驶，丁长义撞上了一辆小三轮车，所幸没有人员伤亡，但他丢了工作，赔了5万，被吊销了驾照。
+丁长义愧疚，把自己关在屋子里整整两个月，出来之后，再也找不到这么好的工作，“东北的三线城市，要人的工厂也少”，他唯一的选择是去鞍山轧钢。去年，丁长义听说，在北京跑外卖能赚钱，于是，他背着家里人，偷偷来了北京。这件事，直到丁长义被隔离、很久回不去老家，家里人才知道。
+这个时候，丁长义已经40岁了，只有跑外卖没有年龄要求，也不会追究过往。
+37岁的刘大海也是这样。而他选择做外卖骑手的最主要原因，是因为缺钱。几年前，刘大海从哈尔滨南下，去广东开烧烤店，选址失败再加上疫情，小店倒闭了，他亏了28万。这是他第二次欠债，上一回，是十年前，他被忽悠去鄂尔多斯的矿上拉煤，买了一辆车，贷款70万，结果一个月下来，一分钱没赚，他才意识到，这件事可能是骗局。
+为了还债，刘大海来了北京。他考虑过做代驾，但一想到，如果不小心剐蹭到别人的车，得赔钱，他就立刻放弃了这个念头，自己负债几十万，“不能出什么岔子了”。
+对于刘大海而言，做骑手是没有门槛的、安全的、赚钱的，更重要的是，跑外卖对应着一种朴素的价值观——有努力就有收获，这能让骑手们的生活渐渐好起来，产生“生活可以渐渐变好”的安全感。就在去年，刘大海付完1500元左右的房租和车租，再留出1000多元的饭钱，还能剩下5000块寄回家里。他一度觉得，如果行情好，自己能继续跑外卖，直到还完租金、重新创业。
+正是这些优势，让骑手工作成为一种兜底的选择。而在今年，人一下子溢出来许多，这让池塘显得狭窄，更磨灭了骑手这份工作的优势。
+新骑手罗颂和田橙子，原本也是冲着这些优势来的。罗颂的经历则和王大海相似。去年，因为疫情，山东禁止堂食了大半年，罗颂开的鲁菜店倒闭了，这让罗颂感觉到极大的落差——店里之前能做到一天一万多的流水，结局却是亏了20万。他爱面子，也缺钱，不想在老家找工作，于是来北京做骑手。有人问起来，在北京做什么？罗颂都模棱两可的回答：“上班。”他想着，赶紧把债还完，再回家。
+而26岁的田橙子，是和自己的朋友结伴来的北京。在此之前的几个月，两人已经在湖南、江西、河北、天津这四个地方周转过。
+那个时候，两人都没有预料到，今年找工作的旅途会如此漫长。在湖南待过的那个电子厂，今年2月就没活儿干了，隔三差五就休息，只能赚3000来块钱。田橙子想找一份薪资更高的工作，他在58同城上看到，天津在招装卸工，而且工资能到8000元以上。于是，二人又从老家江西北上，但到了天津，才知道“宣传都是骗人的”，田橙子形容，不仅工价低了一半，而且是“狼多肉少”。有一回面试，一个只招10个人的岗位，有70个人拉着行李箱面试，厂里的管理员还说，“想干可以，就是分不到那么多活儿”。
+在天津待了一个月，试工了四五家，都不如意。和前辈们一样，田橙子终于流入了骑手的池塘。但令他没有想到的是，时过境迁，骑手已经不再是一份可以兜底的工作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532802369.jpg&#34;
+	width=&#34;640&#34;
+	height=&#34;746&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532802369_hu19b09ef988cd3ad5cbc4c4db0747a623_87313_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532802369_hu19b09ef988cd3ad5cbc4c4db0747a623_87313_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;▲ 冯祥收到的新通知。图 / 受访者提供&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;85&#34;
+		data-flex-basis=&#34;205px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;跳出池塘&#34;&gt;跳出池塘&lt;/h2&gt;
+&lt;p&gt;经过最后一场暴雨中的挣扎，跑了7年外卖的冯祥，打算回家了。
+冯祥并不适应一个人在北京的生活，他没有想到，仅仅是为了可观的薪水，自己就在北京待了那么多年。他想回老家石家庄，加盟一家餐饮店，或许是喜茶，或许是鲍师傅，冯祥没有仔细调研过这两家店，但取单的时候，总看见这两家店排着很长的队。
+除了开店之外，冯祥没有更多的选择了。外卖这份工作，能让冯祥得到“立竿见影”的工资，但也让他不忍心浪费时间去做别的事。冯祥说，几乎自己所有的时间都在跑外卖，“干一个月就有一个月的效益”，如果是学别的技能、转行，都对应着极高的成本。有的时候，冯祥会有些知识焦虑，当周围人提到“KPI”“CEO”这样的术语，他会凑上去问，这是什么意思？好像能多学几个单词，能有一点点收获。
+失去的，似乎又比得到的更多。前两年，冯祥和妻子协议离婚了，因为妻子觉得，冯祥一个人在北京跑外卖，却不在意家里，也不在意她。有的时候，冯祥会有些羡慕自己的发小，他前几年开车做运输，赚了不少钱，最重要的是，有时间陪孩子去三亚旅游、去游乐园玩，刷到发小的朋友圈时，冯祥觉得，自己虽然赚了几年钱，但“没选对行业”。住在狭窄的宿舍里，他似乎没有生活，变得颓废，两个月才理一次发。
+如今，是该跳出池塘的时候了。冯祥算了算，现在自己每个月只能赚5000块，往家里打钱的时候，比往年少打了整整两千，需要用之前的积蓄补上。他安慰自己，或许这是一个契机，能让自己重启一种人生。
+外卖行业本就像一个蓄水池，骑手这个职业，很开放，收入也很公平，能帮助一些面临失业的人重新获得工作机会，也能为亟需获得收入的人缓解生存压力。但这份职业很难一直做下去，有些人实现了外卖行业的职业晋升，从骑手做到了站长、城市经理，有些人则完成了转换赛道的经验积累，完成过渡后选择离开，只有一直想赚钱的人会留下。但现在，月入过万已经很难，这个理由也留不住人了。
+想跳出池塘的还有刘大海，他还有债务在身，急需一份收入更高的收入。这几天下班，他绕着宿舍附近的小吃摊绕了好几圈，打算做个小买卖。有的时候，刘大海觉得自己有些生不逢时，入行太晚，当然，他也听过一些江湖传说，“送三年外卖，能开着卡迪拉克回家”。
+站长吴楠预料到了这些人的离开。他说，每年三月，总有一波人来，到五月的时候，总有一波人离开，他将其归因于“生态”的一部分。但在工作更难找的今年，是否有更多人会选择留下，他也不知道。
+比如26岁的田橙子，还需要在池塘里熬过接下来的28天——他已经交了700块租车费，800块房租，不能浪费，再怎么差，也需要把这个月撑完，再做打算。
+等单的那个下午，田橙子点开了一集动漫，是他最喜欢的《吞噬星空》。在这部动漫里，他最喜欢一个叫罗峰的角色，点开百科网页，罗峰最大的成就包括，让平民窟里的父母，住上了大别墅。田橙子说，这也是他的梦想。
+一集动漫的时长很短。看完之后，田橙子重新点开骑手界面，等待系统给自己派单。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532818566.jpg&#34;
+	width=&#34;640&#34;
+	height=&#34;427&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532818566_hu28287896eeb3e095c1663bd0b8d9978a_31026_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/%E8%BE%9B%E9%85%B8%E6%95%85%E4%BA%8B/1681532818566_hu28287896eeb3e095c1663bd0b8d9978a_31026_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;▲ 图 / 视觉中国&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;文中受访者均为化名，文章为每日人物原创，侵权必究。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>客观评价一下我的长相</title>
+        <link>https://attack-jiangyou.github.io/p/%E5%AE%A2%E8%A7%82%E8%AF%84%E4%BB%B7%E4%B8%80%E4%B8%8B%E6%88%91%E7%9A%84%E9%95%BF%E7%9B%B8/</link>
+        <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E5%AE%A2%E8%A7%82%E8%AF%84%E4%BB%B7%E4%B8%80%E4%B8%8B%E6%88%91%E7%9A%84%E9%95%BF%E7%9B%B8/</guid>
+        <description>&lt;p&gt;说老实话，我自认为长得并不帅
+我的帅BUG太多了
+个头180，瘦BUFF+穿鞋BUFF加持，别人认为我185也是有可能的
+但是我腿不直
+而且我有头皮屑，身上还有小痘痘，小痘痘和头皮屑现在被我消灭了
+我长得又不好看
+1.脸不瘦，骨头的问题没办法
+2.眉毛长的比较淡
+3.虽然白，但是黑头多
+4.整个脸没有立体度，整个就是一个平板
+5.眉毛和眼睛挨得有点近了
+6.牙不齐，不知道下巴该怎么放
+7.颧骨比较高&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>多号选项</title>
+        <link>https://attack-jiangyou.github.io/p/%E5%A4%9A%E5%8F%B7%E9%80%89%E9%A1%B9/</link>
+        <pubDate>Sat, 06 May 2023 20:10:35 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E5%A4%9A%E5%8F%B7%E9%80%89%E9%A1%B9/</guid>
+        <description>&lt;p&gt;中国现在有4大运营商
+移动联通电信广电
+广电的套餐
+23元10G+50分钟通话
+35元20G+100分钟通话
+移动的套餐
+24元10G+30分钟通话
+34元20G+30分钟通话
+19元6G+3个流量包+部分APP免流
+电信
+5元&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>我用过的轴体</title>
+        <link>https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E8%BD%B4%E4%BD%93/</link>
+        <pubDate>Wed, 26 Apr 2023 10:38:55 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E8%BD%B4%E4%BD%93/</guid>
+        <description>&lt;p&gt;用过的轴体&lt;/p&gt;
+&lt;p&gt;凯华BOX白轴V1
+类型：段落轴-扭簧发声轴
+操作力：55~10g
+触发行程：1.8~0.3mm
+总行程：3.6~0.3mm
+体验：大珠小珠落玉盘，比较满意&lt;/p&gt;
+&lt;p&gt;凯华BOX红轴
+类型：线性轴
+操作力：45~10g
+触发行程：1.8~0.3mm
+总行程：3.6~0.3mm
+体验：有点硬，不过可以盲打，还行吧&lt;/p&gt;
+&lt;p&gt;TTC烈焰紫轴
+类型：线性轴
+操作力：42~5g
+触发行程：1.6~0.3mm
+总行程：3.6~0.3mm
+体验：对我这种喜欢大力按键盘的人，感觉就是稍微碰一下就触发了，过于容易触发导致经常误触，不过手感不错&lt;/p&gt;
+&lt;p&gt;J.ZAO白红轴
+类型：线性轴
+操作力：？
+触发行程：？
+总行程：？
+体验：搭配贱驴RS2的套件，使用十分舒适，没有TTC烈焰紫轴容易误触的问题，同样的顺滑，同样的麻将音&lt;/p&gt;
+&lt;p&gt;家用梦中情轴
+类型：段落轴-扭簧发声轴
+操作力：45~10g
+触发行程：1.8~0.3mm轴体
+总行程：3.6~0.3mm
+体验：类似于凯华BOX白轴的体验，目前还没有感受过比凯华BOX白轴更爽的轴体&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>全天候全时段全场景电子产品方案</title>
+        <link>https://attack-jiangyou.github.io/p/%E5%85%A8%E5%A4%A9%E5%80%99%E5%85%A8%E6%97%B6%E6%AE%B5%E5%85%A8%E5%9C%BA%E6%99%AF%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E6%96%B9%E6%A1%88/</link>
+        <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E5%85%A8%E5%A4%A9%E5%80%99%E5%85%A8%E6%97%B6%E6%AE%B5%E5%85%A8%E5%9C%BA%E6%99%AF%E7%94%B5%E5%AD%90%E4%BA%A7%E5%93%81%E6%96%B9%E6%A1%88/</guid>
+        <description>&lt;p&gt;我的电脑，要考虑到出去，也要考虑到在家使用，不想多花钱，又不想用两台电脑，就一定得是很全面的电脑
+最优雅的肯定是幻X，在家插上拓展坞和外接显示器，玩一些大型游戏，要出去就把电脑直接带上直接走
+考虑到就算买了分体式的幻X大概率也要连接键盘，加起来的重量都要比幻13重了，那还不如直接买台幻13，而且幻X电池，屏幕，CPU都做在一起，发热量高，故障率肯定也高
+从重量的角度考虑，买幻13
+但是幻X能分开啊，能分开肯定更优雅，而且就算重一点，又能重多少？你是只能连在一起，而我可以分开，也可以连在一起，这么来看肯定选我啊
+从优雅的角度看，买幻X
+幻13应付大部分需要移动的场合+平板呢，会不会是一个更好的解决方案？
+从完美的优雅角度来看是一个更完美的方案，但是会不会其实很少用到平板？
+那台式机+Surface呢
+或者幻系列+Surface/平板？&lt;/p&gt;
+&lt;p&gt;一个一个分析
+幻+Surface
+使用体验完美，但是你会拥有两台电脑，再加上公司里那台，就是3台电脑，太变态了
+根本没必要，本来一台电脑都嫌他的使用场景不够多，这再把家里和外面分成两个使用场景，那不使用率更低了
+台式机+Surface
+使用体验十分完美，台式机在家打游戏用，平时出去带Surface，但是如果能只用一台设备达到这一目标，那就更完美了。
+台式机+平板
+平板类产品的问题是没有鼠标键盘，当手机用，看看视频，打打游戏还行，想要当电脑用，先不提他的使用体验是极其炸裂的，就仅仅是由于双设备导致我使用它的次数锐减就让我有点不敢买这种产品
+想想当年买的三星TabS7，基本上很少用拿去用，因为屏幕太大了所以就连打游戏都很少，但是ipad mini6的大小刚好可以打游戏，而且如果我给ipad mini6配上手写笔和蓝牙键盘，岂不是比出门带个电脑香多了？同样能玩游戏，同样能浏览网页，同样能做表，同样能输入文字，同样能照片处理，续航还比电脑好多了，而且我还可以买支持网络的版本，实现实时互联，会不会比三星的体验好很多？
+问题就是，你到底有多少需要移动的需求？如果在家，你在看视频，在查资料，在写一些东西，这种场合下能用上吗？就不谈生态问题了，仅仅是IOS那弱智的文件管理能力就不太好解决吧，如何把它和电脑的使用场景串起来呢？如果串不起来，是不是最好的选择还是windows轻薄本呢？
+总体而言，上述方案的底层问题是，能否用一台设备完成所有工作？
+为了兼容多种使用场合，最佳的选择就是平板型的Windows笔记本，问题是无法玩游戏，但是平板型的笔记本电脑真的是看起来太优雅了，比他更优雅的是手机系统的平板，可是如果买了手机系统的平板就得拥有两个设备了
+问题来了，新的选择出现了，折叠屏手机！随着折叠屏手机的发展，出现一款8寸的折叠屏手机的可能性也是很高的吧，这样的话小尺寸平板还有什么价值吗？而且未来我可能会买主机，买了主机的话，我的高配置电脑还有什么价值？将来有没有可能我买一部折叠屏手机，我的背包里还放着键盘和鼠标，折叠起来时当手机用，打开之后当平板用？
+如果电脑完全没有移动的需求，买个主机确实是最佳的选择
+电子产品的形态真是太多了
+智能手表
+手机
+平板
+笔电
+台电
+我后面应该一直都会用智能手表，我会一直用下去，但是不排除会买一个时装表，因为智能手表虽然说功能确实比普通手表强，但是始终没有一个刚需功能出现，心率检测，可换表盘，健康检测都不是刚需，没有也不会有多不爽
+智能穿戴，手机，电脑，由于电池和屏幕，还有输入方式的限制，功能也有很大的鸿沟
+可以认为他们之间是完全不同的产品，还是有点想买个机械表，机械表不用电力，真的还是蛮喜欢的
+要不然买一个？
+其实智能手表这东西也不太重要，完全可以不考虑
+手机和电脑是基础刚需品，只是这之间的使用场景该如何填充的问题
+在外面的问题是，手机的功能不够用，在家的问题是，电脑只能坐着玩
+想了很久也就想出来
+选项1
+台式机+平板，在家台式，出门平板
+选项2
+幻X+显示屏+拓展坞，在家出门都用它&lt;/p&gt;
+&lt;p&gt;根据我出门时带着我的幻13的感受，我感觉我就是用来玩红警和看视频，玩红警的需求其实可以变成玩别的游戏，看视频的话一个平板就够了，所以我是有点想买个ipad mini 6，之前买的三星tab s7确实是买亏了，因为那玩意太大了，玩游戏很累很累，如果我买了ipad mini 6呢？
+我看了一圈，没看到合适的平板，ipad mini 6的王者荣耀视野太小了
+拯救者y700是安卓，我在ios端的东西就用不了了，而且他到今天还是870
+总结就是，也就拯救者y700符合我的需求，但是他又解决的不够完美&lt;/p&gt;
+&lt;p&gt;手机我大概率会一直用苹果了，因为苹果很省心，许多在安卓设备上需要折腾的点在苹果上面直接作为系统功能给你了，他能给你提供的基本上就是最好的，耳机，手表的体验都是最顶级的
+如果我平时出门时使用平板，那我的外出体验也是最顶级的，比带着windows笔记本的体验要好，如果我带着平板就能满足我的需求的话，那平板真的蛮不错的，然后在家里放一个台式机，偶尔必须要携带轻薄本的情况我就带上我的轻薄本幻13&lt;/p&gt;
+&lt;p&gt;经过我的了解，我断定，出门时如果要带电脑，最好的选择就是翻转本，由于你买的电脑虽然没有键盘有触控，但是Windows的触控体验极为拉跨，所以如果你买了一个没有键盘的电脑，平时你还是得使用键盘，那反而等于徒增重量，出门的最佳选择就是平板电脑+键盘鼠标！平板的续航长，有了键盘鼠标，也能查资料了
+所以
+出门在家都用同一设备的计划破产了
+最佳选择变成了在家用台式机，在外面用平板了
+平板类产品，我最想选择的还是ipad，但是ipad只有60hz，差的有点远，而且我的王者账号只在苹果端有，安卓端没有
+小尺寸平板只有拯救者y700符合我的要求
+要不先把y700和ipad mini6都租一下吧，估计一共也就花超不过400块，到时候再去闲鱼淘一个，以后买东西可以先体验再买。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>我那么多存储介质该怎么处理啊</title>
+        <link>https://attack-jiangyou.github.io/p/%E6%88%91%E9%82%A3%E4%B9%88%E5%A4%9A%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8%E8%AF%A5%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E5%95%8A/</link>
+        <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E6%88%91%E9%82%A3%E4%B9%88%E5%A4%9A%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8%E8%AF%A5%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E5%95%8A/</guid>
+        <description>&lt;p&gt;我的存储介质
+1.一张SD卡
+2.一个极其小巧的双头U盘（购入价：110）
+3.一个MLC颗粒U盘（购入价：89）
+4.一个2230，2242，2280都能插的固态硬盘盒
+5.两个M.2固态硬盘&lt;/p&gt;
+&lt;p&gt;我现在想把SD卡留着
+极其小巧的双头U盘尽量卖掉
+MLC颗粒的U盘也卖掉
+固态硬盘盒留着
+固态硬盘都卖掉&lt;/p&gt;
+&lt;p&gt;我的理想配置
+一部大内存的手机，以便让我没有存东西的需要
+一个双接口的装机U盘
+一个2T左右的移动固态备份盘
+把固态备份盘的内容放到百度云里&lt;/p&gt;
+&lt;p&gt;用机械还是固态还没想清楚，估计会选择固态吧，因为固态速度快，而且我没那么多丢了会无比心痛的数据
+一个备份盘里应该有什么？
+我的两个电脑的备份
+我的所有照片和音乐，数据
+差不多得2T
+经过我在Bilibili上的了解，感觉还是买个移动固态硬盘比较好
+经过更深的了解，感觉买个机械硬盘存数据不如把数据直接备份到云上，毕竟一个东西如果买来根本就不用，那我还不如找个更便宜的解决方案呢。&lt;/p&gt;
+&lt;p&gt;问题：要不要搞个Ventory？获得一个随身携带的系统？并且为了最完美的体验，把我的固态装上Ventory？
+其实这个问题很好回答，首先，你为了方便直接买了两台电脑，你如果有一台电脑一直用U盘内系统的话，那他的原系统用来干什么啊？装Ventory也就图一乐，真要干活还得是原系统，所以我没必要往固态里安装Ventory，这个需求并不强
+而且，固态硬盘+硬盘盒的功耗是很高的，满载功耗必然大于5W，而USB接口的供电上限也就5W，所以我觉得没必要，差不多得了&lt;/p&gt;
+&lt;p&gt;西数P40 2T很强
+三星T7&lt;/p&gt;
+&lt;p&gt;存储介质解决方案终极版
+1.iPhone手机到目前为止还是USB2.0，我的内存卡+读卡器的解决方案做到了最小+跑满USB2.0的速度，那我还有什么必要买U盘吗？
+2.既然暂时失去了插手机这个需求，那我还有什么必要搞一个ALL IN ONE的固态硬盘？我现在就连幻隐都想先退了去，先用着凯侠BG5，等一手iPhone的USB3.0！一旦iPhone上了USB3.0，我这边立马买入固态硬盘和硬盘盒
+3.iPhone连不了固态硬盘的原因不是USB2.0，而是供电不足，所以说我首先得期望iPhone15换了USB3.0，这样才能发挥出他的速度，然后还得希望它的供电没有被限制，这两个前提都满足之后我才能买一个ALL IN ONE的固态硬盘，因为供电这个问题是苹果故意这么做的，所以我对于iPhone15的供电能力有大幅提升保持消极态度，如果没有大幅提升，那么就连不了固态硬盘，那么最佳形态就是好一点的内存卡+读卡器了，这么看来，如果是为了最佳状态+使用Ventory，买一个双头的U盘就行，然后再加一个大容量的固态硬盘，但是买这个不影响我买2230固态吧
+1.苹果手机连不了固态
+最佳选择不变，但是有更经济的选择了
+2.苹果手机能连固态
+最佳选择不变，并且最经济的选择也是最佳选择。而且，永远不要买带接口的固态，那个太大了，会挡住电脑的接口。而且现在有那种90度的两个C口公头的线不带接口的硬盘盒买一个那种线就行了
+目前能买到的2T 2230固态只有SN740，但是据说马上就有新款2T 2230固态要发售了，要不要等等？先用镁光2450凑活下，等新款上市再说？然后把幻隐先退掉，先用着
+4.等待苹果15上市，如果苹果手机的供电加强了而且更新了USB3.0，就等于能连固态了，那就换一个2T的2230用着，然后在这之前不要买固态和U盘，就用着当前的设备就行，如果苹果手机的供电没加强或者USB2.0没更新，那就等于连不了固态，那可以考虑额外买一个U盘或者内存卡，总之，存储设备的折腾之路到这了，也就是买一个小巧的固态硬盘盒，里面放一个固态用着了，没啥别的折腾的了，因为现在不着急买固态硬盘，现在可以等一手更优秀的固态硬盘上市，因为现在买SN740的话太烫了，那么小的硬盘盒，散热也不行，所以说可以先等等，先用着自带的2230固态再说。&lt;/p&gt;
+&lt;p&gt;新方案
+日常使用的移动固态暂时先别折腾了，因为还不确定苹果换了C口后能用不，折腾一大圈结果用不了就很尴尬了
+现在的问题就是为了把东西分开要不要整两个固态硬盘盒？
+整两个就是分区不在一起了
+两个固态的话，WTG对散热的要求高，体积要求不高，移动固态对散热的要求不高，体积要求高，两个放一起那就是散热要求高体积要求也高，很难满足啊。
+所以说，鉴于现在对移动固态的需求还不确定，我先确定要不要WTG再说，如果要我就加一个，如果不要，直接用一个固态硬盘盒就搞定了。
+双固态
+比较精简，连上手机只有一个分区，或者我可以开几个分区，但是都是我指定好的，但是这会导致使用率下降，我还可以根据需要选择功耗低的固态，不过这种一步到位的选择等到将来有更好的的时候我可能不太好换
+单固态
+使用率高，由于只有一个选择，SN740，所以烫！但是省钱！
+有时候我在想，我为啥要给我身边的东西考虑这么多、反正肯定用不了一辈子，大概率还是要换的嘛。我的结论是，我这么思考一波之后买的东西都是差不多的，继续这么用下去也只需要把坏掉的换掉，而不是重新开始思考体系的建设，所以我的思考还是有价值的。
+耳机
+电脑
+手机
+U盘
+键盘鼠标
+吉他
+充电器
+充电线
+我都搞了一波了&lt;/p&gt;
+&lt;p&gt;基本消停，并且建设了良好的体系的
+耳机
+一个有线+一个无线
+手机
+完美状态可能就是一部双卡的苹果15Pro吧，目标不遥远
+吉他
+完美了
+充电器
+那个3口的充电器很实用，反而多买的别的充电器作用较小
+充电线
+这不凑活用着呢，不过我的线太多了，线这东西能凑活就行了
+电脑和U盘还没完美呢
+电脑
+完美状态
+家里面一台台式机，公司一台笔记本（不值钱的高U核显机），平时出去还有一台平板，我觉得带个平板就够了，不用买Surface或者幻X一类的机器，我也可以看看幻X一类的体验如何
+幻X很强，也是一台很不错的连拓展坞神器，但是幻X带出去使用并不强，明明Windows的触控体验就是一坨屎，必须要带上鼠标，但是有了鼠标就得带上键盘，既然这三件套我都得带上，那我为什么不直接拿个笔记本？出门在外，体验最好的还是平板，大尺寸的体验也不好，还得是小尺寸的！
+双固态
+比较精简，连上手机只有一个分区，或者我可以开几个分区，但是都是我指定好的，但是这会导致使用率下降，我还可以根据需要选择功耗低的固态，不过这种一步到位的选择等到将来有更好的的时候我可能不太好换
+单固态
+使用率高，由于只有一个选择，SN740，所以烫！但是省钱！
+有时候我在想，我为啥要给我身边的东西考虑这么多、反正肯定用不了一辈子，大概率还是要换的嘛。我的结论是，我这么思考一波之后买的东西都是差不多的，继续这么用下去也只需要把坏掉的换掉，而不是重新开始思考体系的建设，所以我的思考还是有价值的。
+双固态唯一的缺点就是不能单固态了
+等苹果15出来之后如果能连固态硬盘了再说，WTG我打算用组完移动固态之后剩下的边角料组一个&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>我用过的鼠标</title>
+        <link>https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%BC%A0%E6%A0%87/</link>
+        <pubDate>Sat, 15 Apr 2023 08:16:47 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%BC%A0%E6%A0%87/</guid>
+        <description>&lt;p&gt;名称：雷蛇蝰(kui)蛇V2mini
+尺寸：114.2mm×56mm×38.5mm（长x宽x高）
+重量：62g
+连接方式：有线
+接口：USB-A
+使用体验：
+移动体验：对我来说，使用时鼠标略小，刚上手会感觉太轻了，移动起来有点轻飘飘的，但是使用习惯后，轻快的移动体验让我感觉不错。
+连接体验：有线连接十分稳定，但是该鼠标只能有线连接，使用两年后逐渐无法满足我的需要
+图片：
+&lt;img src=&#34;https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%BC%A0%E6%A0%87/1681518317962.jpg&#34;
+	width=&#34;1067&#34;
+	height=&#34;800&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%BC%A0%E6%A0%87/1681518317962_hu62bac878b1ca99018d95f4f7be39817a_37153_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%BC%A0%E6%A0%87/1681518317962_hu62bac878b1ca99018d95f4f7be39817a_37153_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;名称：
+达尔优EM901（有线+2.4G无线版）
+尺寸：125mm×67mm×40mm（长x宽x高）
+重量：85g
+连接方式：有线+2.4G
+接口：
+有线-USB-A
+2.4G-USB-A
+鼠标接口-USB-C
+2.4G收纳仓：有
+使用体验：
+一整个就是雷蛇毒蝰的达尔优完美版！有充电底座，把雷蛇一直没换的USB-C换上了
+移动体验：使用体验就是刚刚好的感觉，没有雷蛇蝰蛇V2mini那么轻，也完全不重，我很喜欢这个重量，大小也刚刚好
+唯一的缺点就是不支持蓝牙模式，我准备卖掉它，买它的上位者达尔优A950，这样就能支持蓝牙了，在鼠标方面的探索也就算是结束了！
+图片：
+&lt;img src=&#34;https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%BC%A0%E6%A0%87/1681519523632.png&#34;
+	width=&#34;600&#34;
+	height=&#34;600&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%BC%A0%E6%A0%87/1681519523632_hu6a7787793fdbfd2f3c6ce6a0613e6967_97398_480x0_resize_box_3.png 480w, https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%BC%A0%E6%A0%87/1681519523632_hu6a7787793fdbfd2f3c6ce6a0613e6967_97398_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>我用过的键盘</title>
+        <link>https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%94%AE%E7%9B%98/</link>
+        <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E9%94%AE%E7%9B%98/</guid>
+        <description>&lt;p&gt;在这里推荐一个和键盘相关的网址
+&lt;a class=&#34;link&#34; href=&#34;https://www.vgn.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.vgn.cn/&lt;/a&gt;
+我认为，家用键盘中98配列是最完美的配列
+体积没有104配列那么大，而且还有104配列99%的功能体验&lt;/p&gt;
+&lt;p&gt;名称：腹灵FL980单模版&amp;amp;三模版
+轴体：BOX白轴
+接口：键盘-C口
+使用体验：
+相比线性轴我还是更喜欢段落轴，线性轴按起来没有段落轴爽
+白轴就是茶轴的感觉，QQ弹弹的
+买了一把单模版的，最后卖掉了，又换了一把三模版的&lt;/p&gt;
+&lt;p&gt;名称：珂芝K75
+轴体：TTC烈焰紫
+接口：C口
+使用体验：
+没有小键盘，有点尬
+因为是软弹的Gasket结构，又是易触发的轴体-TTC烈焰紫，所以盲打时很容易误触，这点扣分很多
+其次是驱动很垃圾，十分难用
+但是输入的体验还是不错的
+而且插线时有两个额外的接口可以当作拓展使用，这点还是加分不少的&lt;/p&gt;
+&lt;p&gt;名称：贱驴RS2
+轴体：J.ZAO白红轴换凯华BOX白轴
+接口：C口
+使用体验：
+非常好！这可能是我买过的最好的一把键盘！最开始的第一把机械键盘是单模版的，我想要一把键盘解决所有问题所以换了三模版，买了三模版之后感觉切换开关在背面，真是太麻烦了，又换了柯芝的K75，换了K75之后发现没有小键盘，体验还是不太好的，又卖了K75，经过多方探查，最后选了贱驴RS2，真的是长得又好看，体验又好，自带的白红轴比烈焰紫轴好，字母数字区换了凯华BOX白轴之后打游戏确认感很强，这个键盘我感觉可以很舒服的用三年了，三年内都不会有比他更强的产品出现了。这把键盘唯一的缺点就是电池有点小了，3000mAh有点少。目前算是完美契合了我的需求了。&lt;/p&gt;
+&lt;p&gt;我的目标：买一把三模热插拔，不用把键盘翻过来切换连接模式，而是在使用中随时切换模式的段落轴键盘
+最好还能有一些额外的小功能&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Chinese Test</title>
+        <link>https://attack-jiangyou.github.io/p/test-chinese/</link>
+        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/test-chinese/</guid>
+        <description>&lt;img src="https://attack-jiangyou.github.io/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Chinese Test" /&gt;&lt;h2 id=&#34;正文测试&#34;&gt;正文测试&lt;/h2&gt;
+&lt;p&gt;而这些并不是完全重要，更加重要的问题是， 带着这些问题，我们来审视一下学生会退会。 既然如何， 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 我们不得不面对一个非常尴尬的事实，那就是， 可是，即使是这样，学生会退会的出现仍然代表了一定的意义。 学生会退会，发生了会如何，不发生又会如何。 经过上述讨论， 生活中，若学生会退会出现了，我们就不得不考虑它出现了的事实。 学生会退会，到底应该如何实现。 这样看来， 在这种困难的抉择下，本人思来想去，寝食难安。 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 就我个人来说，学生会退会对我的意义，不能不说非常重大。 莎士比亚曾经提到过，人的一生是短的，但如果卑劣地过这一生，就太长了。这似乎解答了我的疑惑。 莫扎特说过一句富有哲理的话，谁和我一样用功，谁就会和我一样成功。这启发了我， 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 学生会退会，到底应该如何实现。 一般来说， 从这个角度来看， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 在这种困难的抉择下，本人思来想去，寝食难安。 了解清楚学生会退会到底是一种怎么样的存在，是解决一切问题的关键。 一般来说， 生活中，若学生会退会出现了，我们就不得不考虑它出现了的事实。 问题的关键究竟为何？ 而这些并不是完全重要，更加重要的问题是。&lt;/p&gt;
+&lt;p&gt;奥斯特洛夫斯基曾经说过，共同的事业，共同的斗争，可以使人们产生忍受一切的力量。　带着这句话，我们还要更加慎重的审视这个问题： 一般来讲，我们都必须务必慎重的考虑考虑。 既然如此， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 带着这些问题，我们来审视一下学生会退会。 我认为， 我认为， 在这种困难的抉择下，本人思来想去，寝食难安。 问题的关键究竟为何？ 每个人都不得不面对这些问题。 在面对这种问题时， 要想清楚，学生会退会，到底是一种怎么样的存在。 我认为， 既然如此， 每个人都不得不面对这些问题。 在面对这种问题时， 那么， 我认为， 学生会退会因何而发生。&lt;/p&gt;
+&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;思念是最暖的忧伤像一双翅膀&lt;br&gt;
+让我停不了飞不远在过往游荡&lt;br&gt;
+不告而别的你 就算为了我着想&lt;br&gt;
+这么沉痛的呵护 我怎么能翱翔&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=3aypp_YlBzI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;最暖的憂傷 - 田馥甄&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;图片&#34;&gt;图片&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://attack-jiangyou.github.io/p/test-chinese/florian-klauer-nptLmg6jqDo-unsplash.jpg&#34;
+	width=&#34;667&#34;
+	height=&#34;1000&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/test-chinese/florian-klauer-nptLmg6jqDo-unsplash_hu595aaf3b3dbbb41af5aed8d3958cc9f9_13854_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/test-chinese/florian-klauer-nptLmg6jqDo-unsplash_hu595aaf3b3dbbb41af5aed8d3958cc9f9_13854_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo by Florian Klauer on Unsplash&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;160px&#34;
+	
+&gt;  &lt;img src=&#34;https://attack-jiangyou.github.io/p/test-chinese/luca-bravo-alS7ewQ41M8-unsplash.jpg&#34;
+	width=&#34;1000&#34;
+	height=&#34;667&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/test-chinese/luca-bravo-alS7ewQ41M8-unsplash_hu0a3f1163de68d0b9471979ebf0ecf11e_32400_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/test-chinese/luca-bravo-alS7ewQ41M8-unsplash_hu0a3f1163de68d0b9471979ebf0ecf11e_32400_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo by Luca Bravo on Unsplash&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://attack-jiangyou.github.io/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg&#34;
+	width=&#34;1000&#34;
+	height=&#34;750&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash_hu45a5e3ad5e058da6a00650ed8fd40bea_15530_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash_hu45a5e3ad5e058da6a00650ed8fd40bea_15530_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo by Helena Hertz on Unsplash&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;  &lt;img src=&#34;https://attack-jiangyou.github.io/p/test-chinese/hudai-gayiran-3Od_VKcDEAA-unsplash.jpg&#34;
+	width=&#34;667&#34;
+	height=&#34;1000&#34;
+	srcset=&#34;https://attack-jiangyou.github.io/p/test-chinese/hudai-gayiran-3Od_VKcDEAA-unsplash_hub241c2a9c7a2caf7e16a2a5bbc7141ff_18711_480x0_resize_q75_box.jpg 480w, https://attack-jiangyou.github.io/p/test-chinese/hudai-gayiran-3Od_VKcDEAA-unsplash_hub241c2a9c7a2caf7e16a2a5bbc7141ff_18711_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo by Hudai Gayiran on Unsplash&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;160px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;Photo by Florian Klauer on Unsplash&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;florian-klauer-nptLmg6jqDo-unsplash.jpg&lt;/span&gt;)  ![&lt;span class=&#34;nt&#34;&gt;Photo by Luca Bravo on Unsplash&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;luca-bravo-alS7ewQ41M8-unsplash.jpg&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;Photo by Helena Hertz on Unsplash&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;helena-hertz-wWZzXlDpMog-unsplash.jpg&lt;/span&gt;)  ![&lt;span class=&#34;nt&#34;&gt;Photo by Hudai Gayiran on Unsplash&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;hudai-gayiran-3Od_VKcDEAA-unsplash.jpg&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;相册语法来自 &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Typlog&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>归档</title>
+        <link>https://attack-jiangyou.github.io/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Markdown Syntax Guide</title>
+        <link>https://attack-jiangyou.github.io/p/markdown-syntax-guide/</link>
+        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/markdown-syntax-guide/</guid>
+        <description>&lt;img src="https://attack-jiangyou.github.io/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
+&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
+&lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
+&lt;h2 id=&#34;h2&#34;&gt;H2&lt;/h2&gt;
+&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;
+&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;
+&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;
+&lt;h6 id=&#34;h6&#34;&gt;H6&lt;/h6&gt;
+&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;
+&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;
+&lt;p&gt;Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;/p&gt;
+&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;
+&lt;p&gt;The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code&gt;footer&lt;/code&gt; or &lt;code&gt;cite&lt;/code&gt; element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p&gt;
+&lt;h4 id=&#34;blockquote-without-attribution&#34;&gt;Blockquote without attribution&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+&lt;strong&gt;Note&lt;/strong&gt; that you can use &lt;em&gt;Markdown syntax&lt;/em&gt; within a blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;blockquote-with-attribution&#34;&gt;Blockquote with attribution&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;!-- raw HTML omitted --&gt;
+— &lt;!-- raw HTML omitted --&gt;Rob Pike&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
+&lt;p&gt;Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alice&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;inline-markdown-within-tables&#34;&gt;Inline Markdown within tables&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Italics&lt;/th&gt;
+&lt;th&gt;Bold&lt;/th&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;italics&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;code&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;A&lt;/th&gt;
+&lt;th&gt;B&lt;/th&gt;
+&lt;th&gt;C&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;th&gt;E&lt;/th&gt;
+&lt;th&gt;F&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/td&gt;
+&lt;td&gt;Phasellus ultricies, sapien non euismod aliquam, dui ligula tincidunt odio, at accumsan nulla sapien eget ex.&lt;/td&gt;
+&lt;td&gt;Proin eleifend dictum ipsum, non euismod ipsum pulvinar et. Vivamus sollicitudin, quam in pulvinar aliquam, metus elit pretium purus&lt;/td&gt;
+&lt;td&gt;Proin sit amet velit nec enim imperdiet vehicula.&lt;/td&gt;
+&lt;td&gt;Ut bibendum vestibulum quam, eu egestas turpis gravida nec&lt;/td&gt;
+&lt;td&gt;Sed scelerisque nec turpis vel viverra. Vivamus vitae pretium sapien&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
+&lt;h4 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Example HTML5 Document&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Test&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;code-block-indented-with-four-spaces&#34;&gt;Code block indented with four spaces&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;code-block-with-hugos-internal-highlight-shortcode&#34;&gt;Code block with Hugo&amp;rsquo;s internal highlight shortcode&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Example HTML5 Document&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Test&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;diff-code-block&#34;&gt;Diff code block&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[dependencies.bevy]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git = &amp;#34;https://github.com/bevyengine/bevy&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rev = &amp;#34;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;- features = [&amp;#34;dynamic&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+ features = [&amp;#34;jpeg&amp;#34;, &amp;#34;dynamic&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;list-types&#34;&gt;List Types&lt;/h2&gt;
+&lt;h4 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;List item&lt;/li&gt;
+&lt;li&gt;Another item&lt;/li&gt;
+&lt;li&gt;And another item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;nested-list&#34;&gt;Nested list&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Fruit
+&lt;ul&gt;
+&lt;li&gt;Apple&lt;/li&gt;
+&lt;li&gt;Orange&lt;/li&gt;
+&lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Dairy
+&lt;ul&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;li&gt;Cheese&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-elements--abbr-sub-sup-kbd-mark&#34;&gt;Other Elements — abbr, sub, sup, kbd, mark&lt;/h2&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;GIF&lt;!-- raw HTML omitted --&gt; is a bitmap image format.&lt;/p&gt;
+&lt;p&gt;H&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;O&lt;/p&gt;
+&lt;p&gt;X&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt; + Y&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt; = Z&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Press &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;CTRL&lt;!-- raw HTML omitted --&gt;+&lt;!-- raw HTML omitted --&gt;ALT&lt;!-- raw HTML omitted --&gt;+&lt;!-- raw HTML omitted --&gt;Delete&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; to end the session.&lt;/p&gt;
+&lt;p&gt;Most &lt;!-- raw HTML omitted --&gt;salamanders&lt;!-- raw HTML omitted --&gt; are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p&gt;
+&lt;h2 id=&#34;hyperlinked-image&#34;&gt;Hyperlinked image&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://google.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Google&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=PAAkCSZUG1c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;talk&lt;/a&gt; during Gopherfest, November 18, 2015.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Rich Content</title>
+        <link>https://attack-jiangyou.github.io/p/rich-content/</link>
+        <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/rich-content/</guid>
+        <description>&lt;p&gt;Hugo ships with several &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
+&lt;h2 id=&#34;bilibilibi-shortcode&#34;&gt;bilibilibi Shortcode&lt;/h2&gt;
+
+
+
+
+
+
+    
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=498363026&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;gist-shortcode&#34;&gt;Gist Shortcode&lt;/h2&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/spf13/7896402.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;quote-shortcode&#34;&gt;Quote Shortcode&lt;/h2&gt;
+&lt;p&gt;Stack adds a &lt;code&gt;quote&lt;/code&gt; shortcode.  For example:&lt;/p&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;A famous person, &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Book&#34;&gt;&lt;cite&gt;The book they wrote&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Book&#34;&gt;&lt;cite&gt;Anonymous book&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;cite&gt;Some book&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;Somebody&lt;/span&gt;&lt;cite&gt;&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;</description>
+        </item>
+        <item>
+        <title>مثال نص</title>
+        <link>https://attack-jiangyou.github.io/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/</link>
+        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/</guid>
+        <description>&lt;img src="https://attack-jiangyou.github.io/p/%D9%85%D8%AB%D8%A7%D9%84-%D9%86%D8%B5/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post مثال نص" /&gt;&lt;h2 id=&#34;فقرة-1&#34;&gt;فقرة 1&lt;/h2&gt;
+&lt;p&gt;هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من &lt;a class=&#34;link&#34; href=&#34;https://colorslab.com/textgator/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;مولد النص العربى&lt;/a&gt;، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.&lt;/p&gt;
+&lt;h2 id=&#34;فقرة-2&#34;&gt;فقرة 2&lt;/h2&gt;
+&lt;p&gt;هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من &lt;a class=&#34;link&#34; href=&#34;https://colorslab.com/textgator/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;مولد النص العربى&lt;/a&gt;، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.&lt;/p&gt;
+&lt;h2 id=&#34;تجربة-rtl&#34;&gt;تجربة RTL&lt;/h2&gt;
+&lt;p&gt;كلمة 1 Text كلمة 2&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Math Typesetting</title>
+        <link>https://attack-jiangyou.github.io/p/math-typesetting/</link>
+        <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/math-typesetting/</guid>
+        <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
+&lt;p&gt;In this example we will be using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;KaTeX&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a partial under &lt;code&gt;/layouts/partials/math.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Within this partial reference the &lt;a class=&#34;link&#34; href=&#34;https://katex.org/docs/autorender.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Auto-render Extension&lt;/a&gt; or host these scripts locally.&lt;/li&gt;
+&lt;li&gt;Include the partial in your templates like so:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; or .Params.math .Site.Params.math &lt;span class=&#34;o&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{{&lt;/span&gt; partial &lt;span class=&#34;s2&#34;&gt;&amp;#34;math.html&amp;#34;&lt;/span&gt; . &lt;span class=&#34;o&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{{&lt;/span&gt; end &lt;span class=&#34;o&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;To enable KaTex globally set the parameter &lt;code&gt;math&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in a project&amp;rsquo;s configuration&lt;/li&gt;
+&lt;li&gt;To enable KaTex on a per page basis include the parameter &lt;code&gt;math: true&lt;/code&gt; in content files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Use the online reference of &lt;a class=&#34;link&#34; href=&#34;https://katex.org/docs/supported.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Supported TeX Functions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+
+&lt;p&gt;Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Emoji Support</title>
+        <link>https://attack-jiangyou.github.io/p/emoji-support/</link>
+        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/p/emoji-support/</guid>
+        <description>&lt;img src="https://attack-jiangyou.github.io/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/functions/emojify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To enable emoji globally, set &lt;code&gt;enableEmoji&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/configuration/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;configuration&lt;/a&gt; and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;http://www.emoji-cheat-sheet.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Emoji cheat sheet&lt;/a&gt; is a useful reference for emoji shorthand codes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.emoji {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>关于</title>
+        <link>https://attack-jiangyou.github.io/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;-关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;p&gt;记录我想记录的事&lt;/p&gt;
+&lt;h2 id=&#34;-博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;p&gt;一个默默无闻的人&lt;/p&gt;
+&lt;h2 id=&#34;-兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;p&gt;唱歌，跑步，打羽毛球，探索世界，做没做过的事情&lt;/p&gt;
+&lt;h2 id=&#34;-联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+&lt;p&gt;不让联系&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://attack-jiangyou.github.io/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/links/</guid>
+        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
+&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://attack-jiangyou.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://attack-jiangyou.github.io/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
